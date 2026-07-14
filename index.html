@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#080b12" />
+    <meta
+      name="description"
+      content="Record your screen right in the browser — with mic, system audio and an optional webcam bubble. Nothing is uploaded. No install, no watermark, no account. Works offline."
+    />
+    <meta property="og:title" content="Screenwell — in-browser screen recorder" />
+    <meta
+      property="og:description"
+      content="Record your screen in the browser. Mic, system audio, webcam overlay. Nothing is uploaded — no install, no watermark, no account."
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- CSP: self only. The sole outbound call is the Cloudflare Web Analytics beacon. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'none';"
+    />
+
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Screenwell — in-browser screen recorder</title>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ba2bab2193ba42c1bea3d6714fcd0e28"}'></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
