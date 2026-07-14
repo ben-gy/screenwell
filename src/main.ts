@@ -99,7 +99,7 @@ function render(): void {
       </a>
       <nav class="topnav">
         <button type="button" data-modal="how">How it works</button>
-        <button type="button" data-modal="threat">Threat model</button>
+        <button type="button" data-modal="threat">Privacy</button>
         <button type="button" data-modal="about">About</button>
         <button type="button" id="toggle-drawer" class="drawer-toggle" aria-pressed="false">Event log</button>
       </nav>
@@ -459,15 +459,30 @@ async function shareResult(): Promise<void> {
 let drawerMounted = false;
 function toggleDrawer(): void {
   const drawer = document.getElementById('drawer')!;
-  const btn = document.getElementById('toggle-drawer')!;
   const open = drawer.hidden;
-  drawer.hidden = !open;
-  btn.setAttribute('aria-pressed', String(open));
-  btn.classList.toggle('on', open);
-  if (open && !drawerMounted) {
-    mountEventDrawer(document.getElementById('drawer-mount')!);
+  if (open) openDrawer();
+  else closeDrawer();
+}
+function openDrawer(): void {
+  const drawer = document.getElementById('drawer')!;
+  const btn = document.getElementById('toggle-drawer')!;
+  drawer.hidden = false;
+  btn.setAttribute('aria-pressed', 'true');
+  btn.classList.add('on');
+  if (!drawerMounted) {
+    mountEventDrawer(document.getElementById('drawer-mount')!, closeDrawer);
     drawerMounted = true;
   }
+}
+function closeDrawer(): void {
+  const drawer = document.getElementById('drawer')!;
+  const btn = document.getElementById('toggle-drawer')!;
+  drawer.hidden = true;
+  btn.setAttribute('aria-pressed', 'false');
+  btn.classList.remove('on');
+}
+function isDrawerOpen(): boolean {
+  return !document.getElementById('drawer')!.hidden;
 }
 
 /* ------------------------------------------------------------ shortcuts */
@@ -476,6 +491,7 @@ function initShortcuts(): void {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeModal();
+      if (isDrawerOpen()) closeDrawer();
       return;
     }
     const tag = (e.target as HTMLElement)?.tagName;

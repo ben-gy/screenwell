@@ -212,7 +212,14 @@ kbd {
 }
 .drawer-head { display: flex; align-items: center; justify-content: space-between; padding: 16px 18px; border-bottom: 1px solid var(--border-subtle); }
 .drawer-title { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-tertiary); }
+.drawer-controls { display: flex; align-items: center; gap: 12px; }
 .count { font-size: 0.78rem; color: var(--text-tertiary); }
+.drawer-close {
+  background: var(--bg-elevated); border: 1px solid var(--border-default); color: var(--text-secondary);
+  font-size: 1.3rem; line-height: 1; width: 32px; height: 32px; border-radius: var(--radius-sm);
+  cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--transition);
+}
+.drawer-close:hover { color: var(--text-primary); background: var(--bg-hover); border-color: var(--border-strong); }
 .drawer-filters { display: flex; flex-wrap: wrap; gap: 6px; padding: 12px 18px; border-bottom: 1px solid var(--border-subtle); }
 .filter-pill {
   background: var(--bg-elevated); border: 1px solid var(--border-default); color: var(--text-tertiary);

@@ -3,7 +3,7 @@
  * The cache key embeds a version that MUST be bumped on every deploy,
  * otherwise returning visitors are served a stale shell forever.
  */
-const CACHE = 'screenwell-shell-v1';
+const CACHE = 'screenwell-shell-v2';
 const SHELL = ['/', '/index.html', '/favicon.svg', '/manifest.webmanifest'];
 
 self.addEventListener('install', (event) => {

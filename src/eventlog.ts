@@ -44,15 +44,19 @@ export function clearLog(): void {
   if (countEl) countEl.textContent = '0';
 }
 
-export function mountEventDrawer(container: HTMLElement): () => void {
+export function mountEventDrawer(container: HTMLElement, onClose?: () => void): () => void {
   container.innerHTML = '';
 
   const head = document.createElement('div');
   head.className = 'drawer-head';
   head.innerHTML = `
     <div class="drawer-title">event trail</div>
-    <div class="drawer-controls"><span class="count"><strong id="ev-count">0</strong>&nbsp;events</span></div>
+    <div class="drawer-controls">
+      <span class="count"><strong id="ev-count">0</strong>&nbsp;events</span>
+      <button type="button" class="drawer-close" aria-label="Close event log">&times;</button>
+    </div>
   `;
+  head.querySelector('.drawer-close')?.addEventListener('click', () => onClose?.());
   container.appendChild(head);
 
   const filters = document.createElement('div');

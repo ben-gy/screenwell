@@ -27,7 +27,7 @@ const MODALS: Record<string, ModalDef> = {
     `,
   },
   threat: {
-    title: 'Threat model',
+    title: 'Privacy & threat model',
     body: `
       <div class="tm">
         <section>
