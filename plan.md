@@ -74,8 +74,8 @@ A developer or support engineer at their desk who needs a 30-second screen recor
 - Event log drawer (Dropwell pattern) streaming every state transition and track decision.
 - How-It-Works modal (illustrated steps).
 - Threat Model modal (Protected / Not protected / Trust surface).
-- About modal with benrichardson.dev + sites.benrichardson.dev + source-repo links.
+- About modal with benrichardson.dev + hub.benrichardson.dev + source-repo links.
 - Glossary tooltips for jargon (MediaRecorder, VP9, system audio, compositor…).
 - Output delivery: inline `<video>` player, download, Web Share (files) where supported.
 - Keyboard shortcuts: Space = start/stop, P = pause/resume, Escape = close modal.
-- Sticky footer with benrichardson.dev + sites.benrichardson.dev attribution.
+- Sticky footer with benrichardson.dev + hub.benrichardson.dev attribution.

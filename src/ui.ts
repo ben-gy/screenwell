@@ -64,7 +64,7 @@ const MODALS: Record<string, ModalDef> = {
       <p>It's part of a small collection of privacy-first browser tools. No file you touch here is ever sent to a server.</p>
       <ul class="about-links">
         <li><a href="https://benrichardson.dev/" target="_blank" rel="noopener">benrichardson.dev</a> — who made this</li>
-        <li><a href="https://sites.benrichardson.dev" target="_blank" rel="noopener">sites.benrichardson.dev</a> — the full directory of tools &amp; sites</li>
+        <li><a href="https://hub.benrichardson.dev" target="_blank" rel="noopener">hub.benrichardson.dev</a> — the full directory of tools &amp; sites</li>
         <li><a href="https://github.com/ben-gy/screenwell" target="_blank" rel="noopener">Source on GitHub</a> — read exactly what it does</li>
       </ul>
       <p class="modal-note">No cookies for your data · no fingerprinting · no third-party fonts · anonymous, cookie-less page-view counts via Cloudflare Web Analytics.</p>
