@@ -3,6 +3,11 @@
  * Bootstraps the UI, wires the recorder lifecycle, keeps no heavy logic itself.
  */
 
+// feedback:begin (managed by hub/scripts/feedback/backfill.mjs)
+import { mountFeedback } from './feedback';
+mountFeedback();
+// feedback:end
+
 import './styles/main.css';
 import type { CaptureSettings, Recording } from './types';
 import { composeCapture, micSupported, screenCaptureSupported, type ComposedCapture } from './capture';
